@@ -1,0 +1,59 @@
+<div class="container form">
+
+  <form [formGroup]="formUsers" (ngSubmit)="createUser()">
+    <fieldset>
+      <legend>{{"FormUser.titre" | translate}}</legend>
+      <div class="form-group formg">
+        <label for="firstName">{{"FormUser.Fname" | translate}}</label>
+        <input formControlName="firstName" type="text" class="form-control" id="firstName"
+               placeholder='{{"FormUser.Fname" | translate}}'>
+      </div>
+      <div class="form-group">
+        <label for="lastName">{{"FormUser.Lname" | translate}}</label>
+        <input formControlName="lastName" type="text" class="form-control" id="lastName"
+               placeholder='{{"FormUser.Lname" | translate}}'>
+      </div>
+      <div class="form-group">
+        <label for="email">{{"FormUser.Email" | translate}}</label>
+        <input formControlName="email" type="text" class="form-control" id="email" aria-describedby="emailHelp"
+               placeholder='{{"FormUser.Email" | translate}}'>
+
+      </div>
+      <div class="alert alert-danger"
+           *ngIf="formUsers.get('email').invalid && (formUsers.get('email').touched || formUsers.get('email').dirty) ">
+        <diV *ngIf="formUsers.get('email').getError('required')">{{"FormUser.EmailRequis" | translate}}</diV>
+        <div *ngIf="formUsers.get('email').getError('email')">{{"FormUser.EmailErreur" | translate}}</div>
+
+      </div>
+      <div class="form-group">
+        <label for="password">{{"FormUser.Mdp" | translate}}</label>
+        <input formControlName="password" type="text" class="form-control" id="password"
+               placeholder='{{"FormUser.Mdp" | translate}}'>
+      </div>
+      <div class="alert alert-danger"
+           *ngIf="formUsers.get('password').invalid && (formUsers.get('password').touched || formUsers.get('password').dirty  )">
+        <diV *ngIf="formUsers.get('password').getError('required')">{{"FormUser.LoginRequis" | translate}}</diV>
+        <div *ngIf="formUsers.get('password').getError('minlength')">{{"FormUser.LoginErreur" | translate}}</div>
+      </div>
+      <div class="row" *ngIf="showMsg">
+        <div class="col-xs-12">
+          <p class="alert alert-success">
+            <strong>{{"FormUser.save" | translate}} !!!</strong>
+
+          </p>
+        </div>
+      </div>
+
+
+      <button type="submit" [disabled]="formUsers.invalid" class="btn btn-primary" *ngIf="envir =='prod' "
+              [style.background-color]="'#0c2a77'">{{"FormUser.submit" | translate}}
+      </button>
+      <button type="submit" [disabled]="formUsers.invalid" class="btn btn-primary" *ngIf="envir =='preprod' "
+              [style.background-color]="'orange'">{{"FormUser.submit" | translate}}
+      </button>
+      <button type="submit" [disabled]="formUsers.invalid" class="btn btn-primary" *ngIf="envir =='test' "
+              [style.background-color]="'grey'">{{"FormUser.submit" | translate}}
+      </button>
+    </fieldset>
+  </form>
+</div>

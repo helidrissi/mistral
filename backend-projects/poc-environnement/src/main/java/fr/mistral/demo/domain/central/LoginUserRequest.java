@@ -1,0 +1,19 @@
+package fr.mistral.demo.domain.central;
+
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@ToString
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class LoginUserRequest {
+
+    private String email;
+    private String password;
+    private String env;
+
+}

@@ -1,0 +1,82 @@
+{
+  "Commun": {
+    "Connexion": "Connexion",
+    "Deconnexion": "Se déconnecter",
+    "Sauvegarder": "Sauvegarder"
+  },
+  "Login": {
+    "Identification": "Identification",
+    "Email": "Email",
+    "EmailRequis": "Ce champ nécessite une adresse email valide",
+    "EmailErreur": "Ce champ est obligatoire",
+    "Mdp": "Mot de passe",
+    "Env": "Environnement",
+    "Imp": "Imprimante",
+    "Soc": "Société",
+    "LoginRequis": "Ce champ doit contenir 6 caractères minimum",
+    "LoginErreur": "Ce champ est obligatoire",
+    "SelectLang": "Choissisez la langue :",
+    "Choix": "Choissisez une langue",
+    "Envir": "Choissisez votre environement",
+    "Prod": "Production",
+    "Jeu": "Jeu d'essai",
+    "Archive": "Archive",
+    "Lang1": "Français",
+    "Lang2": "Anglais",
+    "PwdMissed": "Mot de passe oublié"
+  },
+  "SideBar": {
+    "Titre": "S@PHIR",
+    "ChangeLang": "Changez la langue :",
+    "Accueil": "Accueil",
+    "Gestion Commerciale": "Gestion commerciale",
+    "Comptabilité Camargue": "Comptabilité camargue",
+    "Trad": "Traduction",
+    "Espace": "Espace de travail",
+    "Liste": "Prototype",
+    "Sub1": "Marques",
+    "Sub2": "Marques (BDD)",
+    "Sub3": "Articles",
+    "Sub4": "Mise à jour tarifs",
+    "Sub5": "Saisie des ventes",
+    "Sub6": "Historique des sorties",
+    "Sub7": "Administration",
+    "Sub8": "Gestion des thèmes",
+    "Sub9": "Gestion des utilisateurs",
+    "OpenContactUs": "Nous contacter",
+    "OpenInfo": "Info",
+    "OpenAide": "Aide",
+    "TitreModal": "Nous contacter",
+    "SupportMistral": "support.mistral.fr",
+    "TitreCommercial": "COMMERCIAL ET ADMINISTRATIF :",
+    "InfoMistral": "info@mistral.fr",
+    "MailAdminMistral": "admin@mistral.fr",
+    "SiteMistral": "mistral.fr",
+    "TitreHotline": "HOTLINE :",
+    "PageAide": "Aide",
+    "QuitterModal": "Quitter",
+    "Copyright": "Copyright © Mistral/Equipe S@PHIR"
+  },
+  "Accueil": {
+    "Plus": "Plus...",
+    "Moins": "Moins..."
+  },
+  "FormUser": {
+    "Email": "Email",
+    "EmailRequis": "Ce champ nécessite une adresse email valide",
+    "EmailErreur": "Ce champ est obligatoire",
+    "Mdp": "Mot de passe",
+    "LoginRequis": "Ce champ doit contenir 6 caractères minimum",
+    "LoginErreur": "Ce champ est obligatoire",
+    "titre": "Ajout Utilisateur",
+    "Fname": "Prenom",
+    "Lname": "Nom",
+    "save": "Enregistrement avec succès",
+    "submit": "soumettre"
+  },
+  "Administration": {
+    "Upload": "Telecharger",
+    "SuccesA": "Avatar Modifié avec succès",
+    "SuccesL": "Logo Modifié avec succès"
+  }
+}

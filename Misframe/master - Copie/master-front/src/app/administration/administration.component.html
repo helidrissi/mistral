@@ -1,0 +1,85 @@
+<div class="content">
+  <h3>Administration</h3>
+  <hr>
+  <div *ngIf="userInfos.admin">
+
+    <!-- <div class="input-group">
+        <div class="input-group-prepend">
+            <button class="input-group-text" (click)="onUpload1()" id="inputGroupFileAddon01">Upload</button>
+        </div>
+        <div class="custom-file">
+            <input  (change)="onFileChanged($event)" type="file" class="custom-file-input" id="inputGroupFile01"
+                aria-describedby="inputGroupFileAddon01">
+            <label class="custom-file-label" for="inputGroupFile01">Choose logo</label>
+        </div>
+    </div> -->
+
+    <form class="md-form">
+      <div class="file-field">
+        <a class="btn-floating peach-gradient mt-0 float-left">
+          <i class="fas fa-paperclip" aria-hidden="true"></i>
+          <input type="file" (change)="onFileChanged($event)" class="file-path validate" placeholder="Upload your file"
+                 class="inputfile" size="60">
+        </a>
+        <button class="btn btn-primary" *ngIf="envir =='prod'" [style.background-color]="'#0c2a77'"
+                (click)="onUpload2()" id="inputGroupFileAddon01">{{"Administration.Upload" | translate}}-Logo
+        </button>
+        <button class="btn btn-primary" *ngIf="envir =='preprod'" [style.background-color]="'orange'"
+                (click)="onUpload2()" id="inputGroupFileAddon01">{{"Administration.Upload" | translate}}-Logo
+        </button>
+        <button class="btn btn-primary" *ngIf="envir =='test'" [style.background-color]="'grey'" (click)="onUpload2()"
+                id="inputGroupFileAddon01">{{"Administration.Upload" | translate}}-Logo
+        </button>
+        <!-- <div class="file-path-wrapper">
+          <input class="file-path validate" type="text" placeholder="Upload your file">
+        </div> -->
+      </div>
+    </form>
+
+
+  </div>
+
+  <label></label>
+  <label></label>
+  <label></label>
+  <form class="md-form">
+    <div class="file-field">
+      <a class="btn-floating peach-gradient mt-0 float-left">
+        <i class="fas fa-paperclip" aria-hidden="true"></i>
+        <input type="file" (change)="onFileChanged($event)" class="file-path validate" placeholder="Upload your file">
+      </a>
+      <button class="btn btn-primary" *ngIf="envir =='prod'" [style.background-color]="'#0c2a77'" (click)="onUpload()"
+              id="inputGroupFileAddon01">{{"Administration.Upload" | translate}}-Avatar
+      </button>
+      <button class="btn btn-primary" *ngIf="envir =='preprod'" [style.background-color]="'orange'" (click)="onUpload()"
+              id="inputGroupFileAddon01">{{"Administration.Upload" | translate}}-Avatar
+      </button>
+      <button class="btn btn-primary" *ngIf="envir =='test'" [style.background-color]="'grey'" (click)="onUpload()"
+              id="inputGroupFileAddon01">{{"Administration.Upload" | translate}}-Avatar
+      </button>
+      <!-- <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Upload your file">
+      </div> -->
+    </div>
+  </form>
+
+
+  <div class="row succes" *ngIf="showMsgA">
+    <div class="col-xs-12">
+      <p class="alert alert-success">
+        <strong>{{"Administration.SuccesA" | translate}} !!!</strong>
+
+      </p>
+    </div>
+  </div>
+  <div class="row succes" *ngIf="showMsgL">
+    <div class="col-xs-12">
+      <p class="alert alert-success">
+        <strong>{{"Administration.SuccesL" | translate}} !!!</strong>
+
+      </p>
+    </div>
+  </div>
+
+
+</div>
